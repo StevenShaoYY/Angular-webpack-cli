@@ -1,0 +1,152 @@
+/* styles in src/style directory are applied to the whole page */
+/**************
+*  页面样式
+***************/
+
+/* ============
+   基本默认值
+   ============*/
+
+html{
+    font-size:62.5%;
+    color:#000;
+    font-family: "Microsoft YaHei", tahoma, arial, \5b8b\4f53;
+}
+
+::selection{
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+a{
+  text-decoration:none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+/* ============
+   工具样式
+   ============*/
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.pull-right {
+    float: right !important;
+}
+.pull-left {
+    float: left !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.text-left {
+    text-align: left !important;
+}
+.text-center {
+    text-align: center !important;
+}
+.hide {
+    display: none !important;
+}
+.show {
+    display: block !important;
+}
+.invisible {
+    visibility: hidden;
+}
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+/* ===============
+浏览器更新提示
+=============== */
+.browserupgrade {
+    margin: 0;
+    padding: 1rem;
+    background: #ccc;
+}
+
+
+/* ===============
+自定义页面样式
+=============== */
+body {
+  background: #0147A7;
+  color: #fff;
+  min-height:100%;
+}
+
+a {
+  color: #03A9F4;
+}
+
+main {
+  padding: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  display: block;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+/*导航样式*/
+nav{
+  padding-left:100px;
+  padding-top:10px;
+  padding-bottom: 0px;
+  height:40px;
+  background-color: #fff;
+}
+nav li{
+  float: left;
+  font-size: 20px;
+  margin-left:40px;
+}
+nav li a{
+  color: #222;
+}
+.main-content{
+  min-height:940px;
+}
+.echart{
+  width:900px;
+  height: 600px;
+  background-color: #fff;
+  z-index: 10;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+.chart1{
+  width:900px;
+  height: 600px;
+}
+.button-content{
+  width: 850px;
+  margin-top:20px;
+  background-color: #FFF;
+}
