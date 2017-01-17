@@ -1,0 +1,53 @@
+<div class="loading2-content clearfix" ng-cloak>
+
+  <h2 class="md-title">Determinate</h2>
+
+  <p>
+    按百分比完成:{{pd.determinateValue}}%
+  </p>
+  <md-progress-linear md-mode="determinate" value="{{pd.determinateValue}}"></md-progress-linear>
+
+  <h4 class="md-title">Indeterminate</h4>
+
+  <p>
+    时间不确定
+  </p>
+  <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+
+  <h4 class="md-title">Buffer</h4>
+
+  <p>
+    从服务器加载 本机加载完成：{{pd.determinateValue}}%&nbsp服务端完成：{{pd.determinateValue2}}%
+  </p>
+  <md-progress-linear class="md-warn" md-mode="buffer" value="{{pd.determinateValue}}"
+                      md-buffer-value="{{pd.determinateValue2}}"
+                      ng-disabled="!pd.showList[0]"></md-progress-linear>
+
+  <h4 class="md-title">Query</h4>
+
+  <p>
+    对于用户想要指示预加载的情况（直到加载实际上可以）
+  </p>
+
+  <div class="container" ng-class="{'visible' : !pd.activated}">
+    <md-progress-linear md-mode="query" ng-disabled="!pd.showList[1]"></md-progress-linear>
+    <div class="bottom-block">
+      <span>Loading application libraries...</span>
+    </div>
+  </div>
+
+  
+
+  <div id="loaders" layout="row" layout-align="start center">
+
+    <p>Query and Buffer 开关 </p>
+
+    <h5>Off</h5>
+    <md-switch
+        ng-model="pd.activated"
+        ng-change="pd.toggleActivation()"
+        aria-label="Enable Indicators">
+      <h5>On</h5>
+    </md-switch>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-<div class="button-content" ng-cloak>
+<div class="button-content clearfix" ng-cloak>
     <section >
       <md-button>{{pc.title1}}</md-button>
       <md-button md-no-ink class="md-primary">Primary (md-noink)</md-button>
@@ -74,4 +74,112 @@
       </md-button>
       <div class="label">Icon Button</div>
     </section>
+</div>
+
+<div class="datepick-content clearfix" ng-cloak>
+  <div style="float:left;">
+      <div>
+        <h4>Standard date-picker</h4>
+        <md-datepicker ng-model="pc.myDate" md-placeholder="Enter date"></md-datepicker>
+      </div>
+
+      <div>
+        <h4>Disabled date-picker</h4>
+        <md-datepicker ng-model="pc.myDate" md-placeholder="Enter date" disabled></md-datepicker>
+      </div>
+  </div>
+
+  <div style="margin-left:380px;">
+      <div>
+        <h4>Date-picker with min date and max date</h4>
+        <md-datepicker ng-model="pc.myDate" md-placeholder="Enter date"
+            md-min-date="pc.minDate" md-max-date="pc.maxDate"></md-datepicker>
+      </div>
+
+      <div>
+        <h4>Only weekends are selectable</h4>
+        <md-datepicker ng-model="pc.myDate" md-placeholder="Enter date"
+            md-date-filter="cp.onlyWeekendsPredicate"></md-datepicker>
+      </div>
+  </div>
+
+    <div>
+      <div>
+        <h4>Only weekends within given range are selectable</h4>
+        <md-datepicker ng-model="pc.myDate" md-placeholder="Enter date"
+            md-min-date="pc.minDate" md-max-date="pc.maxDate"
+            md-date-filter="cp.onlyWeekendsPredicate"></md-datepicker>
+      </div>
+
+      <div>
+        <h4>Opening the calendar when the input is focused</h4>
+        <md-datepicker ng-model="pc.myDate" md-placeholder="Enter date"
+          md-open-on-focus></md-datepicker>
+      </div>
+    </div>
+</div>
+
+<div class="dialog-content clearfix" ng-cloak>
+  <p>
+    Open a dialog over the app's content. Press escape or click outside to close the dialog and
+    send focus back to the triggering button.
+  </p>
+
+  <div class="dialog-demo-content">
+    <md-button class="md-primary md-raised" ng-click="pc.showAlert($event)"   >
+      Alert Dialog
+    </md-button>
+    <md-button class="md-primary md-raised" ng-click="pc.showConfirm($event)" >
+      Confirm Dialog
+    </md-button>
+    <md-button class="md-primary md-raised" ng-click="pc.showPrompt($event)"  >
+      Prompt Dialog
+    </md-button>
+    <md-button class="md-primary md-raised" ng-click="pc.showAdvanced($event)">
+      Custom Dialog
+    </md-button>
+  </div>
+  <p class="footer">Note: The <b>Confirm</b> dialog does not use <code>$mdDialog.clickOutsideToClose(true)</code>.</p>
+
+  <div ng-if="pc.status" id="status">
+    <b class="md-padding">
+      {{pc.status}}
+    </b>
+  </div>
+</div>
+
+<div  ng-cloak class="loading-content clearfix">
+
+  
+    <h4>Determinate</h4>
+
+    <p>按完成百分比：{{pc.determinateValue}}%</p>
+
+    <div>
+      <md-progress-circular md-mode="determinate" value="{{pc.determinateValue}}"></md-progress-circular>
+    </div>
+
+    <h4>Indeterminate</h4>
+
+    <p>不给定时间</p>
+
+    <div>
+      <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </div>
+
+    <h4>Theming</h4>
+
+    <p>
+      不同主题
+    </p>
+
+    <div layout="row" layout-sm="column" layout-align="space-around">
+      <md-progress-circular ng-disabled="!pc.activated" class="md-hue-2" md-diameter="20px"></md-progress-circular>
+      <md-progress-circular ng-disabled="!pc.activated" class="md-accent" md-diameter="40"></md-progress-circular>
+      <md-progress-circular ng-disabled="!pc.activated" class="md-accent md-hue-1" md-diameter="60"></md-progress-circular>
+      <md-progress-circular ng-disabled="!pc.activated" class="md-warn md-hue-3" md-diameter="70"></md-progress-circular>
+      <md-progress-circular ng-disabled="!pc.activated" md-diameter="96"></md-progress-circular>
+    </div>
+ 
+
 </div>

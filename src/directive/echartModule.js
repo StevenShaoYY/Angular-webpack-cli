@@ -35,7 +35,6 @@ class echartdir{
         // event 定义事件
         // theme 主题名称
         // dataLoaded 数据是否加载
-        //shaojunyan
         scope.$watch(
             ()=>scope.config,
             function (value) {

@@ -1,8 +1,10 @@
 import pageA from "../views/pageA.html";
 import pageB from "../views/pageB.html";
 import pageC from "../views/pageC.html";
+import pageD from "../views/pageD.html";
 import echartcontroller from "../controller/echartcontroller"
 import pageCController from "../controller/pageCController"
+import pageDController from "../controller/pageDController"
 
 function config($routeProvider,$locationProvider){
   $routeProvider
@@ -25,6 +27,11 @@ function config($routeProvider,$locationProvider){
       template:pageC,
       controller:"pageCController",
       controllerAs:'pc'
+    })
+    .when('/pageD',{
+      template:pageD,
+      controller:"pageDController",
+      controllerAs:'pd'
     })
     .otherwise({
     	redirectTo:'/pageA'}

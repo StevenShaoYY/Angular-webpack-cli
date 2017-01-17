@@ -1,2 +1,5 @@
-# Angular-webpak-cli
-基于webpack的angular脚手架
+
+
+# License
+
+[MIT](/LICENSE)

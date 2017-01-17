@@ -94,7 +94,8 @@ li{
 body {
   background: #0147A7;
   color: #fff;
-  min-height:100%;
+  position:static !important;
+  height: auto !important;
 }
 
 a {
@@ -130,9 +131,7 @@ nav li{
 nav li a{
   color: #222;
 }
-.main-content{
-  min-height:940px;
-}
+
 .echart{
   width:900px;
   height: 600px;
@@ -146,7 +145,70 @@ nav li a{
   height: 600px;
 }
 .button-content{
+  color: #222;
   width: 850px;
   margin-top:20px;
+  height: 395px;
   background-color: #FFF;
+  margin-left: 50px;
+  padding-left: 20px;
+  float: left;
+}
+.datepick-content{
+  color: #222;
+  width: 830px;
+  height: 395px;
+  margin-top:20px;
+  background-color: #FFF;
+  margin-left: 50px;
+  padding-left: 40px;
+  float: left;
+}
+
+.dialog-content{
+  color: #222;
+  width: 850px;
+  height: 395px;
+  margin-top:50px;
+  background-color: #FFF;
+  margin-left: 50px;
+  padding-left: 20px;
+  float: left;
+}
+
+.loading-content{
+  color: #222;
+  width: 830px;
+  height: 395px;
+  margin-top:50px;
+  background-color: #FFF;
+  margin-left: 50px;
+  padding-left: 40px;
+  float: left;
+}
+
+.loading2-content{
+  color: #222;
+  width: 830px;
+  height: 600px;
+  margin-top:50px;
+  background-color: #FFF;
+  margin-left: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  float: left;
+}
+
+.bottom-block {
+  display: block;
+  position: relative;
+  background-color: rgba(255, 235, 169, 0.25);
+  height: 85px;
+  width: 100%; }
+
+.bottom-block > span {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 25px;
+  font-size: 0.9em; 
 }
