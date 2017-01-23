@@ -2,9 +2,11 @@ import pageA from "../views/pageA.html";
 import pageB from "../views/pageB.html";
 import pageC from "../views/pageC.html";
 import pageD from "../views/pageD.html";
+import pageE from "../views/pageE.html";
 import echartcontroller from "../controller/echartcontroller"
 import pageCController from "../controller/pageCController"
 import pageDController from "../controller/pageDController"
+import pageEController from "../controller/pageEController"
 
 function config($routeProvider,$locationProvider){
   $routeProvider
@@ -33,10 +35,15 @@ function config($routeProvider,$locationProvider){
       controller:"pageDController",
       controllerAs:'pd'
     })
+    .when('/pageE',{
+      template:pageE,
+      controller:"pageEController",
+      controllerAs:'pe'
+    })
     .otherwise({
     	redirectTo:'/pageA'}
     );
-    $locationProvider.html5Mode(true);
+    //$locationProvider.html5Mode(true);
 }
 
 config.$inject = ['$routeProvider','$locationProvider'];

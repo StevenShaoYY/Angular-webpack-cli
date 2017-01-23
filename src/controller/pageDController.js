@@ -8,6 +8,10 @@ export default class pageDController {
     this.mode = 'query';
     this.activated = true;
     this.j=0;
+    this.project = {
+      description: 'Nuclear Missile Defense System',
+      rate: 500
+    };
     this.counter = 0;
     this.determinateValue = 30;
     this.determinateValue2 = 30;

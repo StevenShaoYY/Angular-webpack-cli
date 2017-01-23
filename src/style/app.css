@@ -212,3 +212,24 @@ nav li a{
   padding: 25px;
   font-size: 0.9em; 
 }
+.table-container{
+  width:500px;
+  margin-left:100px;
+  margin-top:50px;
+  background-color: #fff;
+}
+table{
+  width: 500px;
+  padding: 20px;
+  color:#222;
+}
+my-table>div{
+  padding:20px;
+}
+my-table>div ul>li{
+  float: left;
+  margin-left:10px;
+  border: 1px solid #222;
+  padding-left:2px;
+  padding-right: 2px;
+}
