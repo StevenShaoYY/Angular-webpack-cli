@@ -43,7 +43,7 @@ function config($routeProvider,$locationProvider){
     .otherwise({
     	redirectTo:'/pageA'}
     );
-    //$locationProvider.html5Mode(true);
+     $locationProvider.html5Mode(true);
 }
 
 config.$inject = ['$routeProvider','$locationProvider'];
